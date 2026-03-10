@@ -36,7 +36,7 @@ export const NavBar = () => {
         <img src={favi} alt="BlockSagE logo" className="w-10 h-10" />
 
         <div
-          className={`lg:flex gap-5 items-center lg:justify-between lg:gap-70  ${isOpen ? "flex flex-col bg-hero absolute top-20 right-0 p-5" : "hidden"} w-full`}
+          className={`lg:flex gap-5 items-center lg:justify-between lg:gap-65  ${isOpen ? "flex flex-col bg-hero absolute top-20 right-0 p-5" : "hidden"} w-full`}
         >
           <div
             className={`gap-2 lg:gap-10 font-semibold flex lg:justify-between ${isOpen ? "flex flex-col" : ""}`}
