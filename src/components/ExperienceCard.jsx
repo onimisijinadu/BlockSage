@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import { Experiences } from '../data/data';
+import { Experiences } from "../data/data";
 
 export const ExperienceCard = () => {
   return (
@@ -19,7 +19,7 @@ export const ExperienceCard = () => {
           >
             {/* dot */}
             <div
-              className={`absolute hidden lg:block bg-brown w-3 h-3 rounded-full translate-x-6/12 duration-300 ${data.id % 2 === 0 ? "-left-31" : "-right-29"}`}
+              className={`absolute hidden lg:block bg-brown w-3 h-3 rounded-full translate-x-6/12 duration-300 ${data.id % 2 === 0 ? "-left-31" : "-right-28"}`}
             ></div>
             <div className="flex flex-col gap-5">
               <p className="text-brown">{data.year}</p>
