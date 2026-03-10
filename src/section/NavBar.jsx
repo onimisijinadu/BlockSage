@@ -61,10 +61,11 @@ export const NavBar = () => {
             href="https://wa.me/2348116394666?text=Hello%20I%20saw%20your%20portfolio"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-full"
           >
             <Button
               text={"Let's Talk"}
-              className={`bg-brown hover:bg-bhove cursor-pointer text-gray-200 px-5 py-2 font-semibold w-fit`}
+              className={`bg-brown hover:bg-bhove cursor-pointer text-gray-200 px-5 py-2 font-semibold w-full`}
             />
           </a>
         </div>

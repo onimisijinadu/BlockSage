@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import {
-  ArrowUpRightFromSquare,
-  Github,
-} from 'lucide-react';
+import { ArrowUpRightFromSquare, Github } from "lucide-react";
 
-import { Button } from '../components/Button';
-import { Card } from '../components/card';
-import { ActiveProjects } from '../data/data';
+import { Button } from "../components/Button";
+import { Card } from "../components/card";
+
+import { motion } from "framer-motion";
+
+import { ActiveProjects } from "../data/data";
 
 export const ProjectCard = () => {
   const [showAll, setShowAll] = useState(false);
@@ -24,18 +24,26 @@ export const ProjectCard = () => {
     <>
       <div className="columns-1 sm:columns-2 gap-5 text-white">
         {showAllProject.map((project) => (
-          <div className="mb-5 break-inside-avoid">
+          <motion.div
+            key={project.id}
+            className="mb-5 break-inside-avoid"
+            initial={{ y: 100, opacity: 0, scale: 0.96 }}
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            // viewport={{once: true}}
+          >
             <Card
               padding="p-0"
               gaps="gap-0"
               children={
                 <div className="h-fit">
                   <div className="flex w-full relative bg-trans group overflow-hidden">
-                    {!imgLoaded && (
-                      <div className="absolute inset-0 bg-dark animate-pulse"></div>
+                    {imgLoaded && (
+                      <div className="absolute inset-0 bg-dark"></div>
                     )}
                     <img
                       src={project.image}
+                      alt={project.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       onError={(e) => {
@@ -78,7 +86,7 @@ export const ProjectCard = () => {
                 </div>
               }
             />
-          </div>
+          </motion.div>
         ))}
       </div>
       <Button
