@@ -12,6 +12,8 @@ import { ActiveProjects } from '../data/data';
 export const ProjectCard = () => {
   const [showAll, setShowAll] = useState(false);
 
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   const showAllProject = showAll ? ActiveProjects : ActiveProjects.slice(0, 4);
 
   const handleClick = () => {
@@ -29,22 +31,29 @@ export const ProjectCard = () => {
               children={
                 <div className="h-fit">
                   <div className="flex w-full relative bg-trans group overflow-hidden">
+                    {!imgLoaded && (
+                      <div className="absolute inset-0 bg-dark animate-pulse"></div>
+                    )}
                     <img
                       src={project.image}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      onError={(e) => {
+                        setImgLoaded(true);
+                      }}
                     />
                     <div className="flex gap-3 w-full items-center justify-center absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300">
                       <a
                         href={project.live}
                         target="_blank"
-                        rel="noopener noreferral"
+                        rel="noopener noreferrer"
                       >
                         <ArrowUpRightFromSquare className="text-white border border-slate-400 p-2 w-10 h-10 bg-trans hover:bg-slate-900" />
                       </a>
                       <a
                         href={project.github}
                         target="_blank"
-                        rel="noopener noreferral"
+                        rel="noopener noreferrer"
                       >
                         <Github className="text-white border border-slate-400 p-2 w-10 h-10 bg-trans hover:bg-slate-900" />
                       </a>
