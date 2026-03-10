@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* Default = Light Mode */
+:root {
+  --color-textcolor: rgb(78, 78, 78);
+  --color-headercolor: rgb(0, 0, 0);
+  --color-texthover: rgb(0, 0, 0);
+  --color-background: #f7fdff;
+  --color-brown: var(--color-amber-800);
+  --color-bhove: var(--color-amber-900);
+  --color-fadedText: grey;
+  --color-hero: rgb(15, 5, 5);
+  --color-hoverbtn: rgb(22, 14, 14);
+  --color-tanary: rgb(24, 23, 23);
+  --color-dark: rgb(22, 22, 22);
+  --color-primarydark: rgb(12, 12, 12);
+  --color-trans: rgba(114, 114, 114, 0.2);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-textcolor: rgba(255, 255, 255, 0.87);
+  --color-headercolor: rgb(255, 252, 252);
+  --color-texthover: white;
+  --color-background: #252525;
+  --color-brown: rgb(221, 75, 75);
+  --color-bhove: var(--color-amber-900);
+  --color-fadedText: grey;
+  --color-hero: rgb(36, 34, 34);
+  --color-hoverbtn: rgb(22, 14, 14);
+  --color-tanary: rgb(24, 23, 23);
+  --color-dark: rgb(22, 22, 22);
+  --color-primarydark: rgb(12, 12, 12);
+  --color-trans: rgba(114, 114, 114, 0.2);
+}
+
+@theme {
+  --color-background: var(--color-background);
+  --color-textcolor: var(--color-text);
+  --color-texthover: var(--color-texthover);
+  --color-brown: var(--color-brown);
+  --color-bhove: var(--color-bhove);
+  --color-fadedText: var(--color-fadedText);
+  --color-hero: var(--color-hero);
+  --color-hoverbtn: var(--color-hoverbtn);
+  --color-tanary: var(--color-tanary);
+  --color-dark: var(--color-dark);
+  --color-primarydark: var(--color-primarydark);
+  --color-trans: var(--color-trans);
+  --color-headercolor: var(--color-headercolor);
+}
+body {
+  margin: 0;
+  display: flex;
+  width: min(100%, 320px);
+  min-height: 100vh;
+  background-color: var(--color-background);
+  overflow-x: hidden;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.links {
+  position: relative;
+  display: inline-block;
+}
+
+.links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 4px;
+  background-color: var(--color-brown);
+  transition: width 0.3s ease-in;
+}
+.links:hover::after {
+  width: 100%;
+}
+
+.wraptext {
+  line-height: 153%;
+}
+.headtext {
+  line-height: 130%;
+}
+
+/* .bounce {
+  transition: 0.5ms;
+  animation: line linear 0.5s ease-in-out;
+}
+
+@keyframes line {
+  0%,
+  100% {
+    transform: "translateY(0)";
+  }
+  50% {
+    transform: "translateY(-20px)";
+  }
+} */
