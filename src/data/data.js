@@ -1,7 +1,7 @@
 import onlineschool from '../assets/onlineschool.png';
 import portfolio from '../assets/portfolio.png';
 import rps from '../assets/rps.png';
-import schoolimg from '../assets/schoolmanagement.png';
+//import schoolimg from '../assets/schoolmanagement.png';
 import weather from '../assets/weather.png';
 
 export const MySkills = [
@@ -54,17 +54,17 @@ export const Tools = [
 ];
 
 export const ActiveProjects = [
-  {
-    id: "1",
-    title: "School Management System",
-    description:
-      "A comprehensive school management system built with React, TailwindCSS and Node.jS. It includes features like student information management, attendance tracking, grade reporting, and administrative dashboards.",
-    image: schoolimg,
-    github:
-      "https://github.com/onimisijinadu/Advanced-School-Management-System.git",
-    live: "",
-    languages: ["React", "Node.js", "TailwindCSS", "Express"],
-  },
+  //{
+    //id: "1",
+    //title: "School Management System",
+    //description:
+      //"A comprehensive school management system built with React, TailwindCSS and Node.jS. It includes features like student information management, attendance tracking, grade reporting, and administrative dashboards.",
+    //image: schoolimg,
+    //github:
+      //"https://github.com/onimisijinadu/Advanced-School-Management-System.git",
+    //live: "",
+    //languages: ["React", "Node.js", "TailwindCSS", "Express"],
+  //},
   {
     id: "2",
     title: "Online Education Portal",
