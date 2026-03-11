@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import favi from "/favi.png";
 import { Menu, X } from "lucide-react";
@@ -10,6 +10,8 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const width = useWindowSize();
 
+  const menuRef = useRef(null);
+
   const toggleBtn = () => {
     setIsOpen((prev) => !prev);
   };
@@ -19,6 +21,19 @@ export const NavBar = () => {
       setIsOpen(false);
     }
   }, [width]);
+
+  useEffect(() => {
+    const handleMouseDown = (event) => {
+      //if the menu is open and the click is outside the menu, close the menu
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleMouseDown);
+
+    return () => document.removeEventListener("mousedown", handleMouseDown);
+  }, []);
 
   // useEffect(() => {
   //   const handleResize = () => {
@@ -36,6 +51,7 @@ export const NavBar = () => {
         <img src={favi} alt="BlockSagE logo" className="w-10 h-10" />
 
         <div
+          ref={menuRef}
           className={`lg:flex gap-5 items-center lg:justify-between lg:gap-65  ${isOpen ? "flex flex-col bg-hero absolute top-20 right-0 p-5" : "hidden"} w-full`}
         >
           <div

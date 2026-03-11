@@ -1,7 +1,4 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from "react";
 
 export const useWindowSize = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -16,6 +13,7 @@ export const useWindowSize = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // This is what the NavBar will watch
   return windowWidth;
 };
 
