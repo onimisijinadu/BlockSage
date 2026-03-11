@@ -1,10 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-import favi from "/favi.png";
-import { Menu, X } from "lucide-react";
+import favi from '/favi.png';
+import {
+  Menu,
+  X,
+} from 'lucide-react';
 
-import { Button } from "../components/Button";
-import { useWindowSize } from "../hooks/useWindowSize";
+import { Button } from '../components/Button';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +37,9 @@ export const NavBar = () => {
       }
     };
 
-    document.addEventListener("mousedown", handleMouseDown);
+    document.addEventListener("mouseover", handleMouseDown);
 
-    return () => document.removeEventListener("mousedown", handleMouseDown);
+    return () => document.removeEventListener("mouseover", handleMouseDown);
   }, []);
 
   // useEffect(() => {
