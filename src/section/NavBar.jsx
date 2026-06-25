@@ -43,7 +43,6 @@ export const NavBar = () => {
 
     document.addEventListener("mouseover", handleMouseDown);
     window.addEventListener("scroll", handleScroll);
-
     return () => {document.removeEventListener("mouseover", handleMouseDown);
       window.removeEventListener("scroll", handleScroll);
     };

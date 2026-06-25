@@ -1,6 +1,6 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 
-import { Button } from '../components/Button';
+import { Button } from "../components/Button";
 
 export const Hero = () => {
   return (
@@ -16,11 +16,14 @@ export const Hero = () => {
       </p>
       <div className="flex flex-col items-center">
         <div className="flex gap-3 sm:gap-5 flex-warp sm:flex-nowrap absolute z-10">
-          <Button
-            text={"View Projects"}
-            icon={<ArrowRight />}
-            className={`flex justify-center items-center gap-2 bg-brown hover:bg-bhove cursor-pointer text-gray-200 px-5 py-2 font-semibold z-10`}
-          />
+          <a href="https://github.com/onimisijinadu" rel="noopener noreferrer">
+            <Button
+              text={"View Projects"}
+              icon={<ArrowRight />}
+              click
+              className={`flex justify-center items-center gap-2 bg-brown hover:bg-bhove cursor-pointer text-gray-200 px-5 py-2 font-semibold z-10`}
+            />
+          </a>
           <a href="tel:+2348116394666" rel="noopener noreferrer">
             <Button
               text={"Contact Me"}
