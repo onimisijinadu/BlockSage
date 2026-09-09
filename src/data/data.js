@@ -1,6 +1,8 @@
 import onlineschool from '../assets/onlineschool.png';
 import portfolio from '../assets/portfolio.png';
+import restaurant from '../assets/restaurant.png';
 import rps from '../assets/rps.png';
+import scheduling from '../assets/schedule.png';
 //import schoolimg from '../assets/schoolmanagement.png';
 import weather from '../assets/weather.png';
 
@@ -59,9 +61,8 @@ export const ActiveProjects = [
     title: "Restaurant Website",
     description:
       "A Restaurant website built with React, TailwindCSS and Node.jS. It includes features like add to cart, login with google, payment with paystack, and administrative dashboards.",
-    image: "",
-    github:
-      "https://github.com/onimisijinadu/Neemarh-Treat.git",
+    image: restaurant,
+    github: "https://github.com/onimisijinadu/Neemarh-Treat.git",
     live: "https://neemarh-treat.vercel.app",
     languages: ["React", "Node.js", "TailwindCSS", "Express"],
   },
@@ -110,10 +111,17 @@ export const ActiveProjects = [
     title: "Sheduling System",
     description:
       "A school exam timetable and invigilation scheduling system, built with React, Tailwind css, javascript, postrgesql and expressjs. using Greedy alhorithm for the backend scheduling. and intigration or Large Language model for language processing.",
-    image: "",
+    image: scheduling,
     github: "https://github.com/onimisijinadu/scheduling_system.git",
     live: "https://frontend-theta-mocha-35.vercel.app",
-    languages: ["React", "Tailwind CSS", "JavaScript", "Postgresql", "Expressjs", "Nodejs"],
+    languages: [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Postgresql",
+      "Expressjs",
+      "Nodejs",
+    ],
   },
 ];
 export const Experiences = [
@@ -123,7 +131,7 @@ export const Experiences = [
     role: "Junior Frontend Developer",
     details:
       "This portfolio website serves as a central hub for my work as a web developer. It features selected projects, practical applications, and experiments built with modern technologies. The goal is to demonstrate my problem-solving skills, development process, and passion for creating clean, responsive, and user-friendly web experiences.",
-    company: "FreakyPlus",
+    company: "FreakyPlus Technologies",
     languages: ["Html", "CSS", "JavaScript"],
   },
   {
@@ -134,5 +142,31 @@ export const Experiences = [
       "This portfolio website serves as a central hub for my work as a web developer. It features selected projects, practical applications, and experiments built with modern technologies. The goal is to demonstrate my problem-solving skills, development process, and passion for creating clean, responsive, and user-friendly web experiences.",
     company: "LazerWebs",
     languages: ["React", "TailwindCSS"],
+  },
+  {
+    id: 3,
+    year: "2025-2026",
+    role: "Frontend Developer",
+    details:
+      "This portfolio website serves as a central hub for my work as a web developer. It features selected projects, practical applications, and experiments built with modern technologies. The goal is to demonstrate my problem-solving skills, development process, and passion for creating clean, responsive, and user-friendly web experiences.",
+    company: "Implexa",
+    languages: ["React", "TailwindCSS"],
+  },
+  {
+    id: 4,
+    year: "2025-Till Present",
+    role: "Frontend Developer",
+    details: "BalaPay is a payment processing startup company.",
+    company: "BalaPay fprmally Voya",
+    languages: ["Nextjs", "TailwindCSS"],
+  },
+  {
+    id: 5,
+    year: "2025-Till Present",
+    role: "Backend Developer",
+    details:
+      "SYNTRIX HR is a human resource management system that helps organizations manage their workforce effectively. It provides features such as employee management, attendance tracking, leave management, and performance evaluation.",
+    company: "SYNTRIX HR",
+    languages: ["Postgresql", "Expressjs", "Nodejs"],
   },
 ];
