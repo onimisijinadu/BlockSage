@@ -38,7 +38,7 @@ export const AboutMe = () => {
               Building the Future, One Line at a Time
             </p>
             <p className="text-fadedText w-fit sm:w-11/12">
-              I'm a passionate full-stack software developer with over 8 years
+              I'm a passionate full-stack software developer with over 3 years
               of experience building scalable, performant applications. I
               specialize in modern web technologies and have a proven track
               record of delivering high-quality solutions for startups and
