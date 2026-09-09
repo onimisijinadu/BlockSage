@@ -54,17 +54,17 @@ export const Tools = [
 ];
 
 export const ActiveProjects = [
-  //{
-    //id: "1",
-    //title: "School Management System",
-    //description:
-      //"A comprehensive school management system built with React, TailwindCSS and Node.jS. It includes features like student information management, attendance tracking, grade reporting, and administrative dashboards.",
-    //image: schoolimg,
-    //github:
-      //"https://github.com/onimisijinadu/Advanced-School-Management-System.git",
-    //live: "",
-    //languages: ["React", "Node.js", "TailwindCSS", "Express"],
-  //},
+  {
+    id: "1",
+    title: "Restaurant Website",
+    description:
+      "A Restaurant website built with React, TailwindCSS and Node.jS. It includes features like add to cart, login with google, payment with paystack, and administrative dashboards.",
+    image: "",
+    github:
+      "https://github.com/onimisijinadu/Neemarh-Treat.git",
+    live: "https://neemarh-treat.vercel.app",
+    languages: ["React", "Node.js", "TailwindCSS", "Express"],
+  },
   {
     id: "2",
     title: "Online Education Portal",
@@ -104,6 +104,16 @@ export const ActiveProjects = [
     github: "https://github.com/onimisijinadu/RPSGame.git",
     live: "https://onimisijinadu.github.io/RPSGame/",
     languages: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: "6",
+    title: "Sheduling System",
+    description:
+      "A school exam timetable and invigilation scheduling system, built with React, Tailwind css, javascript, postrgesql and expressjs. using Greedy alhorithm for the backend scheduling. and intigration or Large Language model for language processing.",
+    image: "",
+    github: "https://github.com/onimisijinadu/scheduling_system.git",
+    live: "https://frontend-theta-mocha-35.vercel.app",
+    languages: ["React", "Tailwind CSS", "JavaScript", "Postgresql", "Expressjs", "Nodejs"],
   },
 ];
 export const Experiences = [
